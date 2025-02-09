@@ -1,0 +1,245 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url("/Images/hero_bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    color: #6b55e1;
+    transform: scale(1.05);
+}
+
+/* Responsive Navigation */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Buttons */
+.btn {
+    background: linear-gradient(190deg, #FD7EBE, #7E7FFD);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #6b55e1;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(107, 85, 225, 0.5);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 50px;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+}
+
+/* Floating Animation */
+.hero-image img {
+    width: 400px;
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Course Cards */
+.course-card {
+    background: white;
+    color: black;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        margin-left: 0;
+    }
+
+    .hero-image img {
+        width: 300px;
+    }
+
+    .course-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .teacher-section {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .search-section input {
+        width: 100%;
+    }
+
+    .testimonials {
+        padding: 30px;
+    }
+
+    /* Mobile Navigation */
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: white;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .course-card {
+        width: 90%;
+    }
+}
+@media (max-width: 480px) {
+    .search-section {
+        padding: 15px;
+    }
+
+    .search-section input {
+        width: 100%;
+    }
+
+    .search-course-left {
+        border-radius: 5%;
+        padding: 10px;
+    }
+
+    .search-course-left img {
+        height: 200px;
+    }
+
+    .search-course-right {
+        text-align: center;
+    }
+
+    .right-content {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .hero-image img {
+        width: 250px;
+    }
+
+    .course-card {
+        width: 100%;
+    }
+
+    .testmo-cards {
+        width: 90%;
+    }
+}
